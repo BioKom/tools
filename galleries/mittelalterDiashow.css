@@ -1,0 +1,165 @@
+/*
+ * file name: mittelalter.css
+ * @author Betti Oesterholz
+ * @date 13.09.2011
+ * @mail webmaster@BioKom.info
+ *
+ * System: CSS
+ *
+ * Copyright (C) @c GPL3 2011 Betti Oesterholz
+ *
+ * This script is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License (GPL) as
+ * published by the Free Software Foundation, either version 3 of the
+ * License, or any later version.
+ *
+ * This script is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this script If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+/*
+History:
+13.09.2011  Oesterholz  created
+*/
+
+body{
+    background:#600000;
+    background-image:url('pictures/wall.jpg');
+    color:#100030;
+    /*font-family:"Times New Roman", Times, serif;*/
+    font-family:Times, serif;
+    font-size:120%;
+    /*font:normal Helvetica, Georgia;*/
+}
+
+html, body {
+    height: 100%;
+    text-align: center;
+}
+
+
+h1 a{
+    color:#dcd39e;
+}
+
+h2 a{
+    color:#dcd39e;
+}
+
+h3 a{
+    color:#dcd39e;
+}
+
+a{
+    color:#200050;/*#700050*/
+}
+
+
+#main{
+    background-color:#dcd39e;
+    margin:0px auto;
+    /*padding:2px 2px;*/
+    width:980px;
+}
+
+#head{
+    /*background-color:#dcd39e;*/
+    background-image:url('pictures/Scroll1Head640px.png');
+    background-repeat:no-repeat;
+    background-position:center top;
+    float:left;
+    width:640px;
+    padding:70px 8px 0 0;
+}
+
+#foot_scroll{
+    background-image:url('pictures/Scroll1Foot640px.png');
+    background-repeat:no-repeat;
+    background-position:center bottom;
+    float:left;
+    width:640px;
+    padding:108px 0px;
+    margin:0 0 256px 0;
+}
+
+#content{
+    /*background-color:#ece3Ae;*/
+    background-image:url('pictures/Scroll1Body640px.png');
+    background-repeat:repeat-y;
+    background-position:center top;
+    text-align:center;
+    float:left;
+    padding:0px 32px;
+    overflow:hidden;
+    width:590px;
+    margin:0px 0px;
+}
+
+#navigation{
+    float:right;
+    margin:60px 0 0 0;
+    width:324px;
+}
+
+#navigation ul{
+    /*border:1px solid #700050;*/
+    /*background-color:#FFE0D0;*/
+    font-size:1.3em;
+    border-top:none;
+    padding:0;
+    margin:0;
+}
+
+#navigation li{
+    /*border-top:1px solid #700050;*/
+    background-image:url('pictures/shelf.png');
+    list-style-type:none;
+    /*padding:5px 7px;*/
+    padding:35px 35px;
+}
+
+#navigation li.sub_button{
+    /*border-top:1px solid #700050;*/
+    background-image:url('pictures/shelf.png');
+    list-style-type:none;
+    /*padding:5px 7px;*/
+    padding:35px 35px;
+    font-size:0.9em;
+    padding:35px 45px;
+}
+
+#navigation a{
+    display:block;
+}
+
+#navigation a:link, #navigation a:visited{
+    color:#A00030;/*#700050*/
+    text-decoration:none;
+}
+
+#navigation a:hover{
+    color:#FFE8D8;
+    background-color:#C00040;/*#700050*/
+}
+
+a.download{
+    color:#A00030;/*#700050*/
+    /*text-decoration:none;*/
+    font-size:1.3em;
+}
+
+a.download:hover{
+    color:#FFE8D8;
+    background-color:#C00040;/*#700050*/
+}
+
+
+
+
+
+

@@ -1,0 +1,281 @@
+/*
+ * file name: mittelalterGallery.css
+ * @author Betti Oesterholz
+ * @date 09.03.2012
+ * @mail webmaster@BioKom.info
+ *
+ * System: CSS
+ *
+ * Copyright (C) @c GPL3 2011 Betti Oesterholz
+ *
+ * This script is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License (GPL) as
+ * published by the Free Software Foundation, either version 3 of the
+ * License, or any later version.
+ *
+ * This script is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this script If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+/*
+History:
+09.03.2012  Oesterholz  created
+*/
+
+
+@font-face{
+	font-family:Papyrus;
+	src: url(Papyrus-LET-Bold.otf) format("opentype"),
+		url(Papyrus-LET-Bold.woff), url(Papyrus-LET-Bold.svg)
+		/*url(Papyrus-LET-Bold.eot), url(Papyrus-LET-Bold.pfr)*/;
+	
+}
+
+body{
+	background:#600000;
+	background-image:url('pictures/wall.jpg');
+	color:#100030;
+	/*font-family:"Times New Roman", Times, serif;*/
+	/*font-family:Times, serif;*/
+	font-family:Papyrus;
+	font-size:120%;
+	/*font:normal Helvetica, Georgia;*/
+}
+
+html, body {
+    height: 100%;
+    /*text-align: center;*/
+}
+
+h1 a{
+    color:#360030;
+}
+
+h2 a{
+    color:#360030;
+}
+
+h3 a{
+    color:#360030;
+}
+
+a{
+    color:#200050;/*#700050*/
+}
+
+
+#main{
+    background-color:#dcd39e;
+    margin:0px auto;
+    /*padding:2px 2px;*/
+    width:980px;
+}
+
+/*part / defines to show the picture galerie*/
+
+
+/* defaults required for IE */
+a:visited, a:hover, a:active, a:focus {color:#000;}
+
+#head{
+	/*background-color:#dcd39e;*/
+	background-image:url('pictures/ScrollHeadPicBg850px.png');
+	background-repeat:no-repeat;
+	background-position: 221px 0px;/*center top;*/
+	/*float:left;*/
+	width:1100px;
+	margin:0 0 0px 50px;
+	padding:0px 0px 0 0;
+	overflow:hidden;
+	position:relative;
+}
+
+#headDiashow{
+	float:left;
+}
+
+#headLine{
+	float:none;
+}
+
+
+/*this is the picture on which the big pictures will be shown;
+	width= width tumbnails + backgraund picture + margin;
+	Bilderzauber
+	Auf kleines Bild zeigen:
+		Bild wird groß angezeigt
+	Auf kleines Bild tippen:
+		Bild wird groß dauerhaft angezeigt
+	Auf großes Bild mit rechts klicken:
+		original Bild kann geholt werden
+		(nicht vom Verschwinden stören lassen)*/
+#holder{
+	position:relative;
+	background:transparent url(pictures/ScrollBottomTextBzPicBg850px.png) 270px 0px no-repeat;
+	width:1120px; height:800px;
+}
+
+/*width = position tumbnails*/
+#scrollbox {
+	padding:0;
+	margin:0;
+	width:262px;
+	height:800px;/*width:122px; height:100;*/
+	list-style:none;
+	overflow:auto;
+	float:left;
+}
+
+
+/*width / height = width / height tumbnails*/
+#scrollbox a {
+	display:block;
+	color:#100030;
+	text-decoration:none;
+	border:1px solid #fff;
+	width:120px;
+	height:120px;
+	float:left;
+	padding:0px;
+	font-size:18px;
+	text-align:center;
+}
+
+/*"left:-9999px" -> display just when tumbnail overflow*/
+#scrollbox a span {
+	display:block;
+	position:absolute;
+	left:-9999px;
+	top:0;
+}
+
+
+#scrollbox a span img {
+	border:0;
+}
+
+#scrollbox a:hover {
+	border:1px solid #888;
+}
+
+/*hover; width/ height = big picture background width/ height;  left = distance to left border*/
+#scrollbox a:hover span {
+	width:800px;
+	height:600px;
+	left:270px;
+	background:transparent url(pictures/ScrollBottomPicBg850px.png) 0px 0px no-repeat;
+	padding:0px 0px 0px 20px;
+	z-index:50;
+}/*old: background:#ffA*/
+
+#scrollbox a:active {
+	border:1px solid #000;
+}
+
+#scrollbox a:focus {
+	border:1px solid #000;
+	outline:0;
+}
+
+/*windows?: on klick of tumbnail*/
+#scrollbox a:active span {
+	width:800px;
+	height:600px;
+	left:270px;
+	top:0;
+	color:#000;
+	background:transparent url(pictures/ScrollBottomPicBg850px.png) 0px 0px no-repeat;
+	padding:0px 0px 0px 20px;
+	z-index:-1;
+}
+#scrollbox a:focus span {
+	width:800px;
+	height:600px;
+	left:270px;
+	top:0;
+	color:#000;
+	background:transparent url(pictures/ScrollBottomPicBg850px.png) 0px 0px no-repeat;
+	padding:0px 0px 0px 20px;
+	z-index:10;
+	outline:0;
+}
+
+/*working on first click
+#scrollbox a:focus:active span {width:800px; height:600px; left:280px; top:0; color:#000; background:#0F0; z-index:-1;}*/
+
+
+
+
+/*navigation / menu part*/
+
+#navigation{
+    float:right;
+    margin:60px 0 0 0;
+    width:324px;
+}
+
+#navigation ul{
+    /*border:1px solid #700050;*/
+    /*background-color:#FFE0D0;*/
+    font-size:1.3em;
+    border-top:none;
+    padding:0;
+    margin:0;
+}
+
+#navigation li{
+    /*border-top:1px solid #700050;*/
+    background-image:url('pictures/shelf.png');
+    background-repeat:no-repeat;
+    list-style-type:none;
+    /*padding:5px 7px;*/
+    padding:35px 35px;
+    text-align:center;
+}
+
+#navigation li.sub_button{
+    /*border-top:1px solid #700050;*/
+    background-image:url('pictures/shelfSub.png');
+    background-repeat:no-repeat;
+    list-style-type:none;
+    /*padding:5px 7px;*/
+    padding:35px 35px;
+    /*margin:3px 3px;*/
+    font-size:0.9em;
+}
+
+#navigation a{
+    display:block;
+}
+
+#navigation a:link, #navigation a:visited{
+    color:#360030;
+    text-decoration:none;
+}
+
+#navigation a:hover{
+    color:#5a0030;
+    /*background-color:#e3b884;*/
+}
+
+a.download{
+    color:#A00030;/*#700050*/
+    /*text-decoration:none;*/
+    font-size:1.3em;
+}
+
+a.download:hover{
+    color:#FFE8D8;
+    background-color:#C00040;/*#700050*/
+}
+
+
+
+
+
+
